@@ -1,0 +1,68 @@
+<% include ../header %>
+
+
+    <!-- 路径导航 -->
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">商品栏目管理</a>
+        </li>
+        <li class="active">修改商品栏目</li>
+    </ol>
+    <!-- 路径导航 END -->
+
+
+    <!-- 发布文章 -->
+    <div class="container goodscolommAdd">
+        <div class="row">
+            <form action="/admin/goodscolomn/doedit?id=<%=dataone.id%>" method="POST" enctype="multipart/form-data">
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">商品栏目编号</span>
+                        <input type="text" class="form-control" name="id" value="<%=dataone.id%>">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">商品列表名称</span>
+                        <input type="text" class="form-control" name="name" value="<%=dataone.name%>">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="input-group">
+                        <span class="input-group-addon">商品列表图像 </span>
+                        <div class="form-control">
+                            <img src="/upload/<%=dataone.imgurl%>" width="50">
+                        </div>
+                        <input type="file" class="form-control" name="imgurl">
+                    </div>
+                </div>
+                <div class="input-group">
+                    <span class="input-group-addon">文章栏目</span>
+                    <select name="categoryId" class="form-control">
+                        <% data.forEach(function(val){ %>
+                            <%if(val.id== dataone.categoryId){%>
+                                <option value="<%=val.id%>" selected>
+                                    <%=val.name%>
+                                </option>
+                                <%}else{%>
+                                    <option value="<%=val.id%>">
+                                        <%=val.name%>
+                                    </option>
+                                    <%}%>
+                                        <% }) %>
+                    </select>
+                </div>
+                <div class="col-md-12">
+                    <div class="col-md-6">
+                        <input class="reset" type="reset">
+                    </div>
+                    <div class="col-md-6">
+                        <input class="submit" type="submit">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <% include ../footer %>

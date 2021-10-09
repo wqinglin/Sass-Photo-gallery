@@ -1,0 +1,1 @@
+<view><view>我是分类频道</view><zdy-tabbar vue-id="9d275500-1" current-page="{{1}}" bind:__l="__l"></zdy-tabbar></view>

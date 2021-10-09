@@ -1,0 +1,63 @@
+<% include ../header %>
+
+
+    <!-- 路径导航 -->
+    <ol class="breadcrumb">
+        <li>
+            <a href="#">活动管理</a>
+        </li>
+        <li class="active">修改活动</li>
+    </ol>
+    <!-- 路径导航 END -->
+
+
+    <!-- 发布文章 -->
+    <div class="container articleAdd">
+        <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6">
+                <form action="/admin/activities/doedit?id=<%=dataone.id%>" method="POST" enctype="multipart/form-data">
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">活动编号</span>
+                            <input type="text" class="form-control" name="id" value="<%=dataone.id%>">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">功能图像</span>
+                            <div class="col-md-3">
+                                <img class="editArticleImg" src="/upload/<%= dataone.imgurl%>"
+                                    width="100%">
+                            </div>
+                            <div class="col-md-9">
+                                <input type="hidden" value="<%=dataone.imgurl%>" name="imgurl">
+                                <input type="file" name="imgurl">
+                                <input type="submit" value="确认修改图片">
+                            </div>
+                        </div>
+                        </div>
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">活动名称</span>
+                            <input type="text" class="form-control" name="name" value="<%=dataone.name%>">
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="input-group">
+                            <span class="input-group-addon">活动描述</span>
+                            <input type="text" class="form-control" name="description" value="<%=dataone.description%>">
+                        </div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                        <input class="submit" type="submit">
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-3"></div>
+        </div>
+    </div>
+
+
+    <% include ../footer %>

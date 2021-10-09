@@ -1,0 +1,16 @@
+{
+  "navigationStyle": "custom",
+  "usingComponents": {
+    "uni-nav-bar": "/uni_modules/uni-nav-bar/components/uni-nav-bar/uni-nav-bar",
+    "uni-icons": "/uni_modules/uni-icons/components/uni-icons/uni-icons",
+    "uni-swiper-dot": "/uni_modules/uni-swiper-dot/components/uni-swiper-dot/uni-swiper-dot",
+    "sass": "/component/goodscontent/sass/sass",
+    "sassdashi": "/component/goodscontent/sassdashi/sassdashi",
+    "sasshome": "/component/goodscontent/sasshome/sasshome",
+    "sasschild": "/component/goodscontent/sasschild/sasschild",
+    "sassshops": "/component/goodscontent/sassshops/sassshops",
+    "giftcard": "/component/goodscontent/giftcard/giftcard",
+    "companyserver": "/component/goodscontent/companyserver/companyserver",
+    "chainstore": "/component/goodscontent/chainstore/chainstore"
+  }
+}
